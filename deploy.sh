@@ -4,5 +4,8 @@ sudo docker stop $(docker ps -aq)
 # Remove all containers
 sudo docker rm $(docker ps -aq)
 
+#pull the image from docker hub
+docker pull tarun8117/guvi-react-app-dev:latest
+
 # Start new container with the latest image
 docker-compose up -d
