@@ -1,16 +1,8 @@
-#!/bin/bash
+# Stop all running containers
+sudo docker stop $(docker ps -aq)
 
-#name and version for images
-IMAGE_NAME=react-app
-IMAGE_VERSION=v1
+# Remove all containers
+sudo docker rm $(docker ps -aq)
 
-#Tag the image with the Docker Hub repository name and version
-docker tag $IMAGE_NAME:$IMAGE_VERSION tarun8117/prod:$IMAGE_VERSION
-docker tag $IMAGE_NAME:$IMAGE_VERSION tarun8117/dev:$IMAGE_VERSION
-
-#login to docker hub  
-docker login -u tarun8117 -p    
-  
-#Push the image to Docker Hub
-docker push tarun8117/prod:$IMAGE_VERSION
-docker push tarun8117/dev:$IMAGE_VERSION
+# Start new container with the latest image
+docker-compose up -d
