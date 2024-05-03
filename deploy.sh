@@ -1,8 +1,8 @@
 # Stop all running containers
-docker stop $(docker ps -aq)
+#docker stop $(docker ps -aq)
 
 # Remove all containers
-docker rm $(docker ps -aq)
+#docker rm $(docker ps -aq)
 
 #pull the image from docker hub
 docker pull tarun8117/guvi-react-app-dev:latest
