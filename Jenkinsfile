@@ -4,7 +4,8 @@ pipeline {
     triggers {
         githubPush()
     }
-     stages {
+    
+    stages {
         stage('Build') {
             steps {
                 sh 'chmod +x build.sh'
