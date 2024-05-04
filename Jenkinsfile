@@ -12,7 +12,7 @@ pipeline {
                 // Push the Docker image to Docker Hub
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
-                        docker.image('tarun8117/guvi-react-app-dev:latest').push()
+                        docker.image('tarun8117/guvi-react-app-prod:latest').push()
                     }
                 }
             }
@@ -21,7 +21,7 @@ pipeline {
         //   steps {
         //        script {
         //            // Pull the Docker image from Docker Hub
-        //            docker.image('tarun8117/guvi-react-app-dev:latest').pull()
+        //            docker.image('tarun8117/guvi-react-app-prod:latest').pull()
         //        }
         //   }
         // }
