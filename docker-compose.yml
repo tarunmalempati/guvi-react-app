@@ -3,6 +3,6 @@ version: '3.9'
 services:
     web:
       image: tarun8117/guvi-react-app-dev:latest
-      container_name: react-app
+      container_name:  react-app
       ports:
         - "80:80"
