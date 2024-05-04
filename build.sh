@@ -12,4 +12,4 @@ echo "Build script success"
 
 #push the image to docker hub
 docker tag react-app:latest tarun8117/guvi-react-app-dev:latest
-#docker push tarun8117/guvi-react-app-dev:latest
+#docker push tarun8117/guvi-react-app-dev:latest  
