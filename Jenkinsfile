@@ -17,6 +17,15 @@ pipeline {
                 }
             }
         }
+        // stage('Pull Docker Image') {
+        //   steps {
+        //        script {
+        //            // Pull the Docker image from Docker Hub
+        //            docker.image('tarun8117/guvi-react-app-prod:latest').pull()
+        //        }
+        //   }
+        // }
+         
          stage('Deploy') {
             steps {
                 sh 'chmod +x deploy.sh'
